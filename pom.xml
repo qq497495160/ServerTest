@@ -6,7 +6,9 @@
     <groupId>com.example</groupId>
     <artifactId>myproject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+<!--http://blog.csdn.net/javahighness/article/details/52515226-->
   <packaging>war</packaging>
+
     <!-- Inherit defaults from Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
