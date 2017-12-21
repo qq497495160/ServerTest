@@ -17,19 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.hello.bean.DemoBean;
 
-@RestController//页面用Controller //Gson用RestController
+@Controller//页面或者文字用Controller //Gson用RestController，即使写的haha.html
 //@SpringBootApplication //方法二:http://blog.csdn.net/goodelephant/article/details/52160974
-@RequestMapping("/demo")
-public class DemoController {
-
-    @RequestMapping("/getDemo")
-    public DemoBean getDemo(){
-       DemoBean demo = new DemoBean();
-       demo.setId(1);
-       demo.setName("Angel");
-       return demo;
-    }
-
+@RequestMapping("/html")
+public class HtmlController {
 
     @RequestMapping("/shit")
     private String shit() {
