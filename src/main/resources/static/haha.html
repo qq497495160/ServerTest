@@ -1,69 +1,40 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
 
-		<link rel="stylesheet" href="css/style.css"/>
-		<link rel="stylesheet" href="jbox/jBox.css">
-		<link rel="stylesheet" href="jbox/plugins/Notice/jBox.Notice.css">
-		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
-		<script type="text/javascript" src="jbox/jBox.js" ></script>
-		<script type="text/javascript" src="jbox/plugins/Notice/jBox.Notice.js" ></script>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="jbox/jBox.css">
+        <link rel="stylesheet" href="jbox/plugins/Notice/jBox.Notice.css">
+        <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+        <script type="text/javascript" src="jbox/jBox.js" ></script>
+        <script type="text/javascript" src="jbox/plugins/Notice/jBox.Notice.js" ></script>
 
-		<style>
+        <style>
 
-			
+            
 
-		</style>
-	</head>
-	<body>
+        </style>
+    </head>
+    <body>
 
-	<div id="slick-login">
+    <div id="slick-login">
+<!--        <input type="text" name="username" id="userName" class="placeholder" placeholder="用户名!!">-->
+<!--        <input type="password"  name="password" id="userPwd" class="placeholder" placeholder="密码">-->
+        <button onclick="wedding()" class="logbtn ">主页</button>
+        <button onclick="vip()" class="logbtn ">贵宾</button>
+    </div>
 
-			<input type="text" name="username" id="userName" class="placeholder" placeholder="用户名!!">
-
-			<input type="password"  name="password" id="userPwd" class="placeholder" placeholder="密码">
-
-		<button onclick="login()" class="logbtn ">登录</button>
-	</div>
-
-	<script>
-		function login(){
-		    var userName=$("#userName").val();
-		    var userPwd=$("#userPwd").val();
-
-		    if(userName.trim()==""||userPwd.trim()==""){
-                showTips("yellow","用户名或密码不能为空")
-				return
-			}
-
-
-		    var data={userName:userName,userPwd:userPwd};
-		    $.ajax({
-				url:'./user/login',
-				data:data,
-				dataType:'json',
-				type:'post',
-				success:function (res) {
-
-					if(res.res=='success'){
-                        window.location.href="./contents"
-					}else{
-                        showTips("red","用户名或密码错误")
-					}
-
-                }
-			});
-		}
-
-
-
-
+    <script>
+        function wedding(){
+            window.location.href="wedding.html"
+        }
+        function vip(){
+            window.location.href="vip.html"
+        }
 
         function showTips(color,content){
-
-
             new jBox('Notice', {
                 theme: 'NoticeFancy',
                 attributes: {
@@ -76,6 +47,6 @@
                 animation: {open: 'slide:top', close: 'slide:left'}
             });
         }
-	</script>
+    </script>
 </body>
 </html>

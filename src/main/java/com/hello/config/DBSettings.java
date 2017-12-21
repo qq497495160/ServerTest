@@ -1,4 +1,4 @@
-package hello.config;
+package com.hello.config;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.boot.context.properties.ConfigurationProperties;

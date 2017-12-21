@@ -21,7 +21,7 @@
 
 	<div id="slick-login">
 
-			<input type="text" name="username" id="userName" class="placeholder" placeholder="用户名??">
+			<input type="text" name="username" id="userName" class="placeholder" placeholder="用户名!!">
 
 			<input type="password"  name="password" id="userPwd" class="placeholder" placeholder="密码">
 
@@ -30,31 +30,7 @@
 
 	<script>
 		function login(){
-		    var userName=$("#userName").val();
-		    var userPwd=$("#userPwd").val();
-
-		    if(userName.trim()==""||userPwd.trim()==""){
-                showTips("yellow","用户名或密码不能为空")
-				return
-			}
-
-
-		    var data={userName:userName,userPwd:userPwd};
-		    $.ajax({
-				url:'./user/login',
-				data:data,
-				dataType:'json',
-				type:'post',
-				success:function (res) {
-
-					if(res.res=='success'){
-                        window.location.href="./contents"
-					}else{
-                        showTips("red","用户名或密码错误")
-					}
-
-                }
-			});
+            window.location.href="www.baidu.com"
 		}
 
 
