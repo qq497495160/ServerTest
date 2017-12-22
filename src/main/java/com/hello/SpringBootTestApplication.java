@@ -12,21 +12,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @EnableAutoConfiguration
 @ComponentScan
+// @ComponentScan(value = {"com.hello.controller","com.hello.dao"})
+// 方法一:http://blog.csdn.net/goodelephant/article/details/52160974
 public class SpringBootTestApplication {
 
-	@RequestMapping("/")
-	String home() {
-		System.out.println("cao!!!");
-		return "haha.html";
-	}
+    @RequestMapping("/")
+    String home() {
+        System.out.println("cao!!!");
+        return "haha.html";
+    }
 
-	@RequestMapping("/best")
-	@ResponseBody
-	public String best() {
-		return "best 界面";
-	}
+    @RequestMapping("/best")
+    @ResponseBody
+    public String best() {
+        return "best 界面";
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootTestApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootTestApplication.class, args);
+    }
 }
