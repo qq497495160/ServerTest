@@ -13,19 +13,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @EnableAutoConfiguration
 @ComponentScan
 public class SpringBootTestApplication {
-	
-    @RequestMapping("/")
-    String home() {
-        System.out.println("cao!!!");
-        return "haha.html";
-    }
-    
-    
-    @RequestMapping("/best")
-    @ResponseBody
-    public String best() {
-        return "best 界面";
-    }
+
+	@RequestMapping("/")
+	String home() {
+		System.out.println("cao!!!");
+		return "haha.html";
+	}
+
+	@RequestMapping("/best")
+	@ResponseBody
+	public String best() {
+		return "best 界面";
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootTestApplication.class, args);
