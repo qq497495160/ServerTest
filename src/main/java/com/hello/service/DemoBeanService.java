@@ -29,7 +29,7 @@ public class DemoBeanService {
             	System.out.println("Caonima中国》》》》》》》》》");
             	DemoBean demo = new DemoBean();
             	demo.setId(rs.getInt("id"));
-                demo.setName(rs.getString("xm"));
+                demo.setXm(rs.getString("xm"));
                 demo.setXb(rs.getString("xb"));
                 demo.setCsny(rs.getString("csny"));
                 return demo;
@@ -47,7 +47,7 @@ public class DemoBeanService {
             	System.out.println("Caonima中国》》》》》》》》》");
             	DemoBean demo = new DemoBean();
             	demo.setId(rs.getInt("id"));
-                demo.setName(rs.getString("xm"));
+                demo.setXm(rs.getString("xm"));
                 demo.setXb(rs.getString("xb"));
                 demo.setCsny(rs.getString("csny"));
                 return demo;

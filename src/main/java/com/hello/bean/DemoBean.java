@@ -4,14 +4,17 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
-
+@Entity //bean，用JPA方式需要对Bean文件进行注解
+@Table(name = "name") //如果不注解，默认表名就是这个demo_bean
 public class DemoBean{
 
     private static final long serialVersionUID = 2120869894112984147L;
-
-
+    
+    @Id //如果是Entity，则需要注解Id， No identifier specified for entity
+    @GeneratedValue(strategy = GenerationType.AUTO) //自动增加
     private int id;//主键.
-    private String name;//名字.
+
+    private String xm;//名字.
     private String xb;
     private String csny;
 
@@ -23,12 +26,12 @@ public class DemoBean{
        return id;
     }
 
-    public void setName(String name) {
-       this.name =name;
+    public void setXm(String xm) {
+       this.xm =xm;
     }
 
-    public String getName() {
-       return name;
+    public String getXm() {
+       return xm;
     }
 
     public void setXb(String xb) {
