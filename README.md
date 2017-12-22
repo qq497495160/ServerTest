@@ -37,7 +37,7 @@ postman访问：http://192.168.35.35:9090/userinfo/postUserInfoById?id=1
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
+当时出现NULL值，是因为save数据的时候，user = new DemoBean了
 
 8.如何进行swagger生成api接口？
 

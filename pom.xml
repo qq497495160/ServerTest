@@ -31,8 +31,7 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- 添加Mysql和JDBC,最基础的数据库连接访问方式 同时，spring-boot-starter-jdbc包含在spring-boot-starter-data-jpa -->
-		<!-- <dependency>
-		<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-jdbc</artifactId> 
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-jdbc</artifactId> 
 			</dependency> <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
 			</dependency> -->
 		<!-- 添加Mysql和JPA,JPA连接方式 -->
