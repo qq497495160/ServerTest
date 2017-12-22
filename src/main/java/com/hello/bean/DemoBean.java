@@ -1,14 +1,25 @@
 package com.hello.bean;
 
-public class DemoBean {
-    private long id;//主键.
-    private String name;//测试名称.
+import java.io.Serializable;
 
-    public void setId(long id) {
+import javax.persistence.*;
+
+
+public class DemoBean{
+
+    private static final long serialVersionUID = 2120869894112984147L;
+
+
+    private int id;//主键.
+    private String name;//名字.
+    private String xb;
+    private String csny;
+
+    public void setId(int id) {
        this.id =id;
     }
 
-    public long getId() {
+    public int getId() {
        return id;
     }
 
@@ -18,5 +29,21 @@ public class DemoBean {
 
     public String getName() {
        return name;
+    }
+
+    public void setXb(String xb) {
+        this.xb = xb;
+    }
+
+    public String getXb() {
+        return xb;
+    }
+
+    public void setCsny(String csny) {
+        this.csny = csny;
+    }
+
+    public String getCsny() {
+        return csny;
     }
 }
